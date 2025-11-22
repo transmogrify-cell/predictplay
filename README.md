@@ -1,16 +1,118 @@
-# React + Vite
+# PredictPlay – Frontend Betting Simulation App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PredictPlay is a **React + Vite + TailwindCSS** frontend project that simulates a modern sports-betting platform.  
+It includes mock authentication, wallet management, bet slips, markets, live fixtures, and localStorage persistence — all in a single-page app.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- User Authentication (mock)
+- Sports Markets (Cricket, Football, Basketball)
+- Bet Slip System (multi-selection)
+- Wallet with Deposit/Withdrawal (demo mode)
+- Transaction History
+- Profile + KYC (mock verification)
+- Responsible Gaming Section
+- Persistent data using `localStorage`
+- Responsive UI using **TailwindCSS**
+- Smooth UI animations via **Framer Motion**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19**
+- **Vite**
+- **TailwindCSS**
+- **Framer Motion**
+- **Lucide Icons**
+- **localStorage (mock backend)**
+
+---
+
+## 📦 Getting Started
+
+### 1. Clone the Repository
+```bash
+https://github.com/transmogrify-cell/predictplay.git
+```
+cd predictplay
+
+2. Install Dependencies
+```bash
+npm install
+```
+
+3. Start Development Server
+```bash
+npm run dev
+```
+
+4. Build for Production
+```bash
+npm run build
+```
+
+5. Preview Production Build
+```bash
+npm run preview
+```
+predictplay/
+│── public/
+│── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+│   ├── assets/
+│── tailwind.config.js
+│── package.json
+│── README.md
+How It Works
+
+All user data is stored in localStorage
+
+Wallet, transactions, slips, and KYC persist across refresh
+
+
+SQL Backend 
+
+
+Key Database Tables
+
+users – user profiles (with roles & hashed passwords)
+
+wallet – linked to users, stores balance
+
+sports – sports categories
+
+teams – sports teams
+
+games – fixtures with sport, teams, time, status
+
+selections – betting options + odds
+
+bets – placed bets
+
+bet_items – selections inside a bet
+
+transactions – deposits, withdrawals, payout logs
+
+audit_log – safety & tracking logs
+
+Highlights
+
+Wallet auto-created via trigger
+
+Bet placement automatically deducts balance
+
+Winning bets trigger payouts
+
+Withdrawal validation to avoid negative balance
+
+Full audit history for transparency
+
+📜 License
+
+This project is intended for educational/demo use only.
+
