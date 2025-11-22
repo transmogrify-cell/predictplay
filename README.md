@@ -58,6 +58,7 @@ npm run build
 ```bash
 npm run preview
 ```
+```bash
 predictplay/
 │── public/
 │── src/
@@ -69,50 +70,43 @@ predictplay/
 │── package.json
 │── README.md
 How It Works
+```
+## ⚙️ How It Works
 
-All user data is stored in localStorage
-
-Wallet, transactions, slips, and KYC persist across refresh
-
-
-SQL Backend 
+- All user data is stored in **localStorage**
+- **Wallet, transactions, slips, and KYC** persist across refresh
 
 
-Key Database Tables
+---
 
-users – user profiles (with roles & hashed passwords)
+## 🗄 SQL Backend 
 
-wallet – linked to users, stores balance
 
-sports – sports categories
+### **Key Database Tables**
 
-teams – sports teams
+- **users** – user profiles (with roles & hashed passwords)
+- **wallet** – linked to users, stores balance
+- **sports** – sports categories
+- **teams** – sports teams
+- **games** – fixtures with sport, teams, time, status
+- **selections** – betting options + odds
+- **bets** – placed bets
+- **bet_items** – selections inside a bet
+- **transactions** – deposits, withdrawals, payout logs
+- **audit_log** – safety & tracking logs
 
-games – fixtures with sport, teams, time, status
+---
 
-selections – betting options + odds
+### **Highlights**
 
-bets – placed bets
+- Wallet **auto-created via trigger**
+- Bet placement automatically **deducts balance**
+- Winning bets **trigger payouts**
+- Withdrawal validation to avoid negative balance
+- Full **audit history** for transparency
 
-bet_items – selections inside a bet
+---
 
-transactions – deposits, withdrawals, payout logs
+## 📜 License
 
-audit_log – safety & tracking logs
-
-Highlights
-
-Wallet auto-created via trigger
-
-Bet placement automatically deducts balance
-
-Winning bets trigger payouts
-
-Withdrawal validation to avoid negative balance
-
-Full audit history for transparency
-
-📜 License
-
-This project is intended for educational/demo use only.
-
+This project is intended for **educational/demo use only**.
