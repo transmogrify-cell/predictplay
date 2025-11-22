@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Optional base so the neon looks great out-of-the-box */
+:root { color-scheme: light dark; }
+html, body, #root { height: 100%; }
